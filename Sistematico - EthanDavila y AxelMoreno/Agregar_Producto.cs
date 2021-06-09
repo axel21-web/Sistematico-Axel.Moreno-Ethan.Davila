@@ -16,7 +16,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
     public partial class Agregar_Producto : Form
     {
         private string Busqueda = "";
-        private TelefonoModel TModel;
+        private TelefonoModel TModel { get; set; }
         public Agregar_Producto()
         {
             InitializeComponent();
