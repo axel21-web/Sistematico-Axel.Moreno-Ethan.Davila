@@ -13,50 +13,22 @@ using System.Windows.Forms;
 
 namespace Sistematico___EthanDavila_y_AxelMoreno
 {
-    public partial class Agregar_Producto : Form
+    public partial class Agregar : Form
     {
-        private string Busqueda = "";
-        private TelefonoModel TModel { get; set; }
-        public Agregar_Producto()
+        public Catalogo Catalogo;
+        public TelefonoModel TModel { get; set; }
+        public Agregar()
         {
             InitializeComponent();
             LoadComponents();
         }
-
         private void LoadComponents()
         {
+            Catalogo = new Catalogo();
             TModel = new TelefonoModel();
-            dgvTelefonos.ReadOnly = true;
-            dgvTelefonos.SelectionMode = DataGridViewSelectionMode.CellSelect;
-            dgvTelefonos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvTelefonos.RowsDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             CmbMarca.Items.AddRange(Enum.GetValues(typeof(Marcas)).Cast<Object>().ToArray());
             CmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbMarca.SelectedIndex = 0;
-        }
-
-        private void TxtBusqueda_TextChanged(object sender, EventArgs e)
-        {
-            Buscador(Busqueda);
-        }
-
-        public void Buscador(string Buscador)
-        {
-            Buscador = TxtBusqueda.Text;
-            try
-            {
-                foreach (DataGridViewRow Row in dgvTelefonos.Rows)
-                {
-                    foreach (DataGridViewCell Cell in Row.Cells)
-                    {
-                        if (Cell.Value.ToString() == Buscador)
-                        {
-                            dgvTelefonos.CurrentCell = Cell;
-                        }
-                    }
-                }
-            }
-            catch (Exception ex) { }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -88,7 +60,6 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
                 };
 
                 TModel.Add(T);
-                dgvTelefonos.DataSource = TModel.getAll();
                 MessageBox.Show("El Teléfono ha sido agregado exitosamente!!");
             }
             catch (Exception ex)
@@ -119,15 +90,13 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private void btnBuscarImagen_Click(object sender, EventArgs e)
         {
-            if (dgvTelefonos.Rows.Count == 0)
+            OpenFileDialog Imagen = new OpenFileDialog();
+            if (Imagen.ShowDialog() == DialogResult.OK)
             {
-                return;
+                TxtImagen.Text = Imagen.FileName;
             }
-            int index = dgvTelefonos.CurrentCell.RowIndex;
-            TModel.Remove(index);
-            dgvTelefonos.DataSource = TModel.getAll();
         }
     }
 }

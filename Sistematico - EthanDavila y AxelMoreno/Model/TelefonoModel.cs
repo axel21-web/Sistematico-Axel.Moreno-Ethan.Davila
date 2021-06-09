@@ -27,17 +27,10 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.Model
             Telefonos = tmp;
         }
 
-
         public Telefono[] getAll()
         {
             return Telefonos;
         }
-
-        public Telefono GetTelefono(int index)
-        {
-            return Telefonos[index];
-        }
-
 
         public void Remove(int index)
         {

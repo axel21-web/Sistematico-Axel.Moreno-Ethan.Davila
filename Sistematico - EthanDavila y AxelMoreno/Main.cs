@@ -22,13 +22,15 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
 
         private void productoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Agregar_Producto frm = new Agregar_Producto();
+            Catalogo frm = new Catalogo();
+            frm.TModel = TModel;
             frm.Show();
         }
 
         private void tablaProductosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             View frm = new View();
+            frm.TModel = TModel;
             frm.Show();
         }
     }
