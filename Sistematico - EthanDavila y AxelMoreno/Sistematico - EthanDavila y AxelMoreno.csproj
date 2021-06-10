@@ -122,5 +122,11 @@
   <ItemGroup>
     <None Include="Resources\Qonexia.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackGround 2.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
