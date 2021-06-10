@@ -23,7 +23,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
         {
             PBImage.Image = Image.FromFile(Telefono.Imagen);
             LblID.Text = LblID.Text + " " + Telefono.ID;
-            LblNombre.Text = LblNombre.Text + " " + Telefono.Nombre;
+            LkLblNombre.Text = LkLblNombre.Text + " " + Telefono.Nombre;
             LblMarca.Text = LblMarca.Text + " " + Telefono.Marca.ToString();
             LblModelo.Text = LblModelo.Text + " " + Telefono.Modelo.ToString();
             LblNoExistencias.Text = LblNoExistencias.Text + " " + Telefono.NoExistencias;

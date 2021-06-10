@@ -31,11 +31,11 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
         {
             this.PBImage = new System.Windows.Forms.PictureBox();
             this.LblID = new System.Windows.Forms.Label();
-            this.LblNombre = new System.Windows.Forms.Label();
             this.LblNoExistencias = new System.Windows.Forms.Label();
             this.LblMarca = new System.Windows.Forms.Label();
             this.LblModelo = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
+            this.LkLblNombre = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PBImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,15 +56,6 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             this.LblID.Size = new System.Drawing.Size(24, 13);
             this.LblID.TabIndex = 1;
             this.LblID.Text = "ID: ";
-            // 
-            // LblNombre
-            // 
-            this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(15, 177);
-            this.LblNombre.Name = "LblNombre";
-            this.LblNombre.Size = new System.Drawing.Size(50, 13);
-            this.LblNombre.TabIndex = 2;
-            this.LblNombre.Text = "Nombre: ";
             // 
             // LblNoExistencias
             // 
@@ -102,15 +93,27 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             this.LblDescripcion.TabIndex = 6;
             this.LblDescripcion.Text = "Descripción: ";
             // 
+            // LkLblNombre
+            // 
+            this.LkLblNombre.ActiveLinkColor = System.Drawing.Color.Red;
+            this.LkLblNombre.AutoSize = true;
+            this.LkLblNombre.LinkColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.LkLblNombre.Location = new System.Drawing.Point(15, 179);
+            this.LkLblNombre.Name = "LkLblNombre";
+            this.LkLblNombre.Size = new System.Drawing.Size(50, 13);
+            this.LkLblNombre.TabIndex = 7;
+            this.LkLblNombre.TabStop = true;
+            this.LkLblNombre.Text = "Nombre: ";
+            // 
             // ucTelefono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LkLblNombre);
             this.Controls.Add(this.LblDescripcion);
             this.Controls.Add(this.LblModelo);
             this.Controls.Add(this.LblMarca);
             this.Controls.Add(this.LblNoExistencias);
-            this.Controls.Add(this.LblNombre);
             this.Controls.Add(this.LblID);
             this.Controls.Add(this.PBImage);
             this.Name = "ucTelefono";
@@ -126,10 +129,10 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
 
         private System.Windows.Forms.PictureBox PBImage;
         private System.Windows.Forms.Label LblID;
-        private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Label LblNoExistencias;
         private System.Windows.Forms.Label LblMarca;
         private System.Windows.Forms.Label LblModelo;
         private System.Windows.Forms.Label LblDescripcion;
+        private System.Windows.Forms.LinkLabel LkLblNombre;
     }
 }
