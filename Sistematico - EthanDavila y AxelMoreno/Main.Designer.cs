@@ -62,14 +62,14 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             // productoToolStripMenuItem
             // 
             this.productoToolStripMenuItem.Name = "productoToolStripMenuItem";
-            this.productoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productoToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.productoToolStripMenuItem.Text = "Producto";
             this.productoToolStripMenuItem.Click += new System.EventHandler(this.productoToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(120, 6);
             // 
             // viewToolStripMenuItem
             // 
@@ -83,7 +83,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             // tablaProductosToolStripMenuItem
             // 
             this.tablaProductosToolStripMenuItem.Name = "tablaProductosToolStripMenuItem";
-            this.tablaProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tablaProductosToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.tablaProductosToolStripMenuItem.Text = "Tabla Productos";
             this.tablaProductosToolStripMenuItem.Click += new System.EventHandler(this.tablaProductosToolStripMenuItem_Click);
             // 
@@ -98,6 +98,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(575, 393);
             this.Controls.Add(this.menuStrip1);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
             this.Text = "Sistemático de Programación";

@@ -16,7 +16,11 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
     public partial class Agregar : Form
     {
         public Catalogo Catalogo;
-        public TelefonoModel TModel { get; set; }
+        private int RowIndex = -1;
+        public DataGridView dgvP;
+        public bool editable = false;
+        //public TelefonoModel TModel { get; set; }
+        public List<Telefono> Telefonos { get; set; }
         public Agregar()
         {
             InitializeComponent();
@@ -25,7 +29,6 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
         private void LoadComponents()
         {
             Catalogo = new Catalogo();
-            TModel = new TelefonoModel();
             CmbMarca.Items.AddRange(Enum.GetValues(typeof(Marcas)).Cast<Object>().ToArray());
             CmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbMarca.SelectedIndex = 0;
@@ -58,9 +61,30 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
                     Descripción = Descripcion,
                     Imagen = Imagen,
                 };
+                if (editable && RowIndex != -1)
+                {
+                    Telefono pr = Telefonos.ElementAt(RowIndex);
+                    pr.Nombre = Nombre;
+                    pr.NoExistencias = NoExistencias;
+                    pr.Marca = Marca;
+                    pr.Modelo = Modelo;
+                    pr.Precio = Precio;
+                    pr.Descripción = Descripcion;
+                    pr.Imagen = Imagen;
+                    RowIndex = -1;
 
-                TModel.Add(T);
-                MessageBox.Show("El Teléfono ha sido agregado exitosamente!!");
+                    MessageBox.Show("Producto actualizado satisfactoriamente");
+                }
+                else
+                {
+                    Telefonos.Add(T);
+                    MessageBox.Show("El Teléfono ha sido agregado exitosamente!!");
+                }
+
+                Catalogo.dgvTelefonos.DataSource = null;
+                Catalogo.dgvTelefonos.DataSource = Telefonos;
+                Catalogo.dgvTelefonos.Refresh();
+                Close();
             }
             catch (Exception ex)
             {
@@ -97,6 +121,18 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             {
                 TxtImagen.Text = Imagen.FileName;
             }
+        }
+        public void LoadTelefono(int i)
+        {
+            Telefono p = Telefonos.ElementAt(i);
+            TxtNombre.Text = p.Nombre;
+            TxtNoExistencias.Text = p.NoExistencias + "";
+            //cmbMarca.SelectedIndex = 0;
+            TxtModelo.Text = p.Modelo + "";
+            TxtPrecio.Text = p.Precio + "";
+            TxtDescripcion.Text = p.Descripción;
+            TxtImagen.Text = p.Imagen;
+            RowIndex = i;
         }
     }
 }

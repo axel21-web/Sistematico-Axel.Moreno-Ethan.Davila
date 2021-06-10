@@ -16,7 +16,8 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
     public partial class Catalogo : Form
     {
         public string Busqueda = "";
-        public TelefonoModel TModel { get; set; }
+        //public TelefonoModel TModel { get; set; }
+        public List<Telefono> Telefonos { get; set; }
         public Catalogo()
         {
             InitializeComponent();
@@ -25,7 +26,6 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
 
         private void LoadComponents()
         {
-            TModel = new TelefonoModel();
             dgvTelefonos.ReadOnly = true;
             dgvTelefonos.SelectionMode = DataGridViewSelectionMode.CellSelect;
             dgvTelefonos.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -34,6 +34,25 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
 
         private void TxtBusqueda_TextChanged(object sender, EventArgs e)
         {
+            //if (dgvTelefonos == null)
+            //{
+            //    return;
+            //}
+            //List<Telefono> filtro = new List<Telefono>();
+            //string clave = TxtBusqueda.Text;
+            //foreach (Telefono p in Telefonos)
+            //{
+            //    if ((p.ID + "").ToUpper().Contains(clave) || p.Nombre.ToUpper().Contains(clave) || (p.NoExistencias + "").ToUpper().Contains(clave)
+            //            || (p.Precio + "").ToUpper().Contains(clave) || p.Descripción.ToUpper().Contains(clave) || p.Imagen.ToUpper().Contains(clave))
+            //    {
+            //        filtro.Add(p);
+            //    }
+            //    if (filtro.Count > 0)
+            //    {
+            //        dgvTelefonos.DataSource = null;
+            //        dgvTelefonos.DataSource = filtro;
+            //    }
+            //}
             Buscador(Busqueda);
         }
 
@@ -63,27 +82,43 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
                 return;
             }
             int index = dgvTelefonos.CurrentCell.RowIndex;
-            TModel.Remove(index);
-            dgvTelefonos.DataSource = TModel.getAll();
+            Telefonos.RemoveAt(index);
+            dgvTelefonos.DataSource = null;
+            dgvTelefonos.DataSource = Telefonos;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Agregar frm = new Agregar();
-            frm.TModel = TModel;
+            frm.Telefonos = Telefonos;
             frm.Show();
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Actualizar frm = new Actualizar();
-            frm.TModel = TModel;
-            frm.Show();
+            if (dgvTelefonos.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe agregar productos a la tabla");
+                return;
+            }
+            if (dgvTelefonos.CurrentCell.RowIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una fila de la tabla");
+                return;
+            }
+            int index = dgvTelefonos.CurrentCell.RowIndex;
+            Agregar frm = new Agregar();
+            frm.Telefonos = Telefonos;
+            frm.dgvP = dgvTelefonos;
+            frm.LoadTelefono(index);
+            frm.editable = true;
+            _ = frm.ShowDialog();
         }
 
         private void dgvTelefonos_Click(object sender, EventArgs e)
         {
-            dgvTelefonos.DataSource = TModel.getAll();
+            dgvTelefonos.DataSource = null;
+            dgvTelefonos.DataSource = Telefonos;
         }
     }
 }

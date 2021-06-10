@@ -22,4 +22,4 @@ C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico 
 C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico - EthanDavila y AxelMoreno\obj\Debug\Sistematico - EthanDavila y AxelMoreno.pdb
 C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico - EthanDavila y AxelMoreno\obj\Debug\Sistematico___EthanDavila_y_AxelMoreno.Agregar.resources
 C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico - EthanDavila y AxelMoreno\obj\Debug\Sistematico___EthanDavila_y_AxelMoreno.Catalogo.resources
-C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico - EthanDavila y AxelMoreno\obj\Debug\Sistematico___EthanDavila_y_AxelMoreno.Actualizar.resources
+C:\Users\Ethan Dávila\Desktop\Sistematico-Axel.Moreno-Ethan.Davila\Sistematico - EthanDavila y AxelMoreno\obj\Debug\Sistematico___EthanDavila_y_AxelMoreno.User_Controls.ucTelefono.resources
