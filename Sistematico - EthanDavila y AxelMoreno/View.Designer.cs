@@ -34,9 +34,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 289);
+            this.ClientSize = new System.Drawing.Size(577, 331);
             this.Name = "View";
             this.Text = "View";
+            this.Load += new System.EventHandler(this.View_Load);
             this.ResumeLayout(false);
 
         }

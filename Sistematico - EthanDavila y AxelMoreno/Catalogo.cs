@@ -76,7 +76,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-            Agregar frm = new Agregar();
+            Actualizar frm = new Actualizar();
             frm.TModel = TModel;
             frm.Show();
         }
