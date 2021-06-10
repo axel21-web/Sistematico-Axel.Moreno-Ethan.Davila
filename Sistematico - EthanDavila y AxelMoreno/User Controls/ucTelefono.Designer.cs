@@ -51,7 +51,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblID
             // 
             this.LblID.AutoSize = true;
-            this.LblID.Location = new System.Drawing.Point(13, 148);
+            this.LblID.Location = new System.Drawing.Point(15, 153);
             this.LblID.Name = "LblID";
             this.LblID.Size = new System.Drawing.Size(24, 13);
             this.LblID.TabIndex = 1;
@@ -60,7 +60,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblNombre
             // 
             this.LblNombre.AutoSize = true;
-            this.LblNombre.Location = new System.Drawing.Point(13, 172);
+            this.LblNombre.Location = new System.Drawing.Point(15, 177);
             this.LblNombre.Name = "LblNombre";
             this.LblNombre.Size = new System.Drawing.Size(50, 13);
             this.LblNombre.TabIndex = 2;
@@ -69,7 +69,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblNoExistencias
             // 
             this.LblNoExistencias.AutoSize = true;
-            this.LblNoExistencias.Location = new System.Drawing.Point(13, 197);
+            this.LblNoExistencias.Location = new System.Drawing.Point(15, 202);
             this.LblNoExistencias.Name = "LblNoExistencias";
             this.LblNoExistencias.Size = new System.Drawing.Size(101, 13);
             this.LblNoExistencias.TabIndex = 3;
@@ -78,7 +78,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblMarca
             // 
             this.LblMarca.AutoSize = true;
-            this.LblMarca.Location = new System.Drawing.Point(13, 224);
+            this.LblMarca.Location = new System.Drawing.Point(15, 229);
             this.LblMarca.Name = "LblMarca";
             this.LblMarca.Size = new System.Drawing.Size(43, 13);
             this.LblMarca.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblModelo
             // 
             this.LblModelo.AutoSize = true;
-            this.LblModelo.Location = new System.Drawing.Point(13, 249);
+            this.LblModelo.Location = new System.Drawing.Point(15, 254);
             this.LblModelo.Name = "LblModelo";
             this.LblModelo.Size = new System.Drawing.Size(48, 13);
             this.LblModelo.TabIndex = 5;
@@ -96,7 +96,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             // LblDescripcion
             // 
             this.LblDescripcion.AutoSize = true;
-            this.LblDescripcion.Location = new System.Drawing.Point(13, 275);
+            this.LblDescripcion.Location = new System.Drawing.Point(15, 280);
             this.LblDescripcion.Name = "LblDescripcion";
             this.LblDescripcion.Size = new System.Drawing.Size(69, 13);
             this.LblDescripcion.TabIndex = 6;

@@ -90,7 +90,9 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             Agregar frm = new Agregar();
+            frm.Text = "Agregar";
             frm.Telefonos = Telefonos;
+            frm.dgv = dgvTelefonos;
             frm.Show();
         }
 
@@ -108,8 +110,9 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             }
             int index = dgvTelefonos.CurrentCell.RowIndex;
             Agregar frm = new Agregar();
+            frm.Text = "Actualizar";
             frm.Telefonos = Telefonos;
-            frm.dgvP = dgvTelefonos;
+            frm.dgv = dgvTelefonos;
             frm.LoadTelefono(index);
             frm.editable = true;
             _ = frm.ShowDialog();

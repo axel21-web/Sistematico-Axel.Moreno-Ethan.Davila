@@ -15,10 +15,9 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
 {
     public partial class Agregar : Form
     {
-        public Catalogo Catalogo;
         private int RowIndex = -1;
-        public DataGridView dgvP;
         public bool editable = false;
+        public DataGridView dgv;
         //public TelefonoModel TModel { get; set; }
         public List<Telefono> Telefonos { get; set; }
         public Agregar()
@@ -28,7 +27,7 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
         }
         private void LoadComponents()
         {
-            Catalogo = new Catalogo();
+            dgv = new DataGridView();
             CmbMarca.Items.AddRange(Enum.GetValues(typeof(Marcas)).Cast<Object>().ToArray());
             CmbMarca.DropDownStyle = ComboBoxStyle.DropDownList;
             CmbMarca.SelectedIndex = 0;
@@ -73,6 +72,8 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
                     pr.Imagen = Imagen;
                     RowIndex = -1;
 
+                    ValidateTelefono(Nombre, NoExistencias, out Precio, Modelo);
+
                     MessageBox.Show("Producto actualizado satisfactoriamente");
                 }
                 else
@@ -81,9 +82,9 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
                     MessageBox.Show("El Teléfono ha sido agregado exitosamente!!");
                 }
 
-                Catalogo.dgvTelefonos.DataSource = null;
-                Catalogo.dgvTelefonos.DataSource = Telefonos;
-                Catalogo.dgvTelefonos.Refresh();
+                dgv.DataSource = null;
+                dgv.DataSource = Telefonos;
+                dgv.Refresh();
                 Close();
             }
             catch (Exception ex)
