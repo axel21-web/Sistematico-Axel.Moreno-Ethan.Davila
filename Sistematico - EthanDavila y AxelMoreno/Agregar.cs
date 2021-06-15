@@ -135,5 +135,10 @@ namespace Sistematico___EthanDavila_y_AxelMoreno
             TxtImagen.Text = p.Imagen;
             RowIndex = i;
         }
+
+        public void CargarCamposProducto(int id)
+        {
+            Telefono telefono = Telefonos.pro;
+        }
     }
 }

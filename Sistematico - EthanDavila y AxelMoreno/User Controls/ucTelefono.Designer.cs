@@ -33,9 +33,9 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             this.LblNoExistencias = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
             this.LblMarcaModelo = new System.Windows.Forms.Label();
-            this.TxtDescripcionTelefono = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.LkLblNombre = new System.Windows.Forms.LinkLabel();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.PBImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,19 +77,6 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             this.LblMarcaModelo.Size = new System.Drawing.Size(0, 16);
             this.LblMarcaModelo.TabIndex = 8;
             // 
-            // TxtDescripcionTelefono
-            // 
-            this.TxtDescripcionTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.TxtDescripcionTelefono.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.TxtDescripcionTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TxtDescripcionTelefono.Location = new System.Drawing.Point(17, 295);
-            this.TxtDescripcionTelefono.Multiline = true;
-            this.TxtDescripcionTelefono.Name = "TxtDescripcionTelefono";
-            this.TxtDescripcionTelefono.ReadOnly = true;
-            this.TxtDescripcionTelefono.Size = new System.Drawing.Size(366, 66);
-            this.TxtDescripcionTelefono.TabIndex = 9;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -113,13 +100,21 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
             this.LkLblNombre.Text = "Nombre";
             this.LkLblNombre.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LkLblNombre_MouseDoubleClick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(20, 306);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 12;
+            // 
             // ucTelefono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.LkLblNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TxtDescripcionTelefono);
             this.Controls.Add(this.LblMarcaModelo);
             this.Controls.Add(this.LblDescripcion);
             this.Controls.Add(this.LblNoExistencias);
@@ -139,8 +134,8 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
         private System.Windows.Forms.Label LblNoExistencias;
         private System.Windows.Forms.Label LblDescripcion;
         private System.Windows.Forms.Label LblMarcaModelo;
-        private System.Windows.Forms.TextBox TxtDescripcionTelefono;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LkLblNombre;
+        private System.Windows.Forms.Label label2;
     }
 }
