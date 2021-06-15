@@ -30,94 +30,102 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
         private void InitializeComponent()
         {
             this.PBImage = new System.Windows.Forms.PictureBox();
-            this.LblID = new System.Windows.Forms.Label();
             this.LblNoExistencias = new System.Windows.Forms.Label();
-            this.LblMarca = new System.Windows.Forms.Label();
-            this.LblModelo = new System.Windows.Forms.Label();
             this.LblDescripcion = new System.Windows.Forms.Label();
+            this.LblMarcaModelo = new System.Windows.Forms.Label();
+            this.TxtDescripcionTelefono = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.LkLblNombre = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PBImage)).BeginInit();
             this.SuspendLayout();
             // 
             // PBImage
             // 
-            this.PBImage.Location = new System.Drawing.Point(16, 12);
+            this.PBImage.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PBImage.Location = new System.Drawing.Point(3, 18);
             this.PBImage.Name = "PBImage";
-            this.PBImage.Size = new System.Drawing.Size(258, 133);
+            this.PBImage.Size = new System.Drawing.Size(402, 127);
             this.PBImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.PBImage.TabIndex = 0;
             this.PBImage.TabStop = false;
             // 
-            // LblID
-            // 
-            this.LblID.AutoSize = true;
-            this.LblID.Location = new System.Drawing.Point(15, 153);
-            this.LblID.Name = "LblID";
-            this.LblID.Size = new System.Drawing.Size(24, 13);
-            this.LblID.TabIndex = 1;
-            this.LblID.Text = "ID: ";
-            // 
             // LblNoExistencias
             // 
             this.LblNoExistencias.AutoSize = true;
-            this.LblNoExistencias.Location = new System.Drawing.Point(15, 202);
+            this.LblNoExistencias.Location = new System.Drawing.Point(15, 251);
             this.LblNoExistencias.Name = "LblNoExistencias";
-            this.LblNoExistencias.Size = new System.Drawing.Size(101, 13);
+            this.LblNoExistencias.Size = new System.Drawing.Size(64, 13);
             this.LblNoExistencias.TabIndex = 3;
-            this.LblNoExistencias.Text = "No. de Existencias: ";
-            // 
-            // LblMarca
-            // 
-            this.LblMarca.AutoSize = true;
-            this.LblMarca.Location = new System.Drawing.Point(15, 229);
-            this.LblMarca.Name = "LblMarca";
-            this.LblMarca.Size = new System.Drawing.Size(43, 13);
-            this.LblMarca.TabIndex = 4;
-            this.LblMarca.Text = "Marca: ";
-            // 
-            // LblModelo
-            // 
-            this.LblModelo.AutoSize = true;
-            this.LblModelo.Location = new System.Drawing.Point(15, 254);
-            this.LblModelo.Name = "LblModelo";
-            this.LblModelo.Size = new System.Drawing.Size(48, 13);
-            this.LblModelo.TabIndex = 5;
-            this.LblModelo.Text = "Modelo: ";
+            this.LblNoExistencias.Text = "Disponibles:";
             // 
             // LblDescripcion
             // 
             this.LblDescripcion.AutoSize = true;
-            this.LblDescripcion.Location = new System.Drawing.Point(15, 280);
+            this.LblDescripcion.Location = new System.Drawing.Point(15, 278);
             this.LblDescripcion.Name = "LblDescripcion";
-            this.LblDescripcion.Size = new System.Drawing.Size(69, 13);
+            this.LblDescripcion.Size = new System.Drawing.Size(131, 13);
             this.LblDescripcion.TabIndex = 6;
-            this.LblDescripcion.Text = "Descripción: ";
+            this.LblDescripcion.Text = "Descripción del Teléfono: ";
+            // 
+            // LblMarcaModelo
+            // 
+            this.LblMarcaModelo.AutoSize = true;
+            this.LblMarcaModelo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMarcaModelo.Location = new System.Drawing.Point(17, 199);
+            this.LblMarcaModelo.Name = "LblMarcaModelo";
+            this.LblMarcaModelo.Size = new System.Drawing.Size(0, 16);
+            this.LblMarcaModelo.TabIndex = 8;
+            // 
+            // TxtDescripcionTelefono
+            // 
+            this.TxtDescripcionTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TxtDescripcionTelefono.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.TxtDescripcionTelefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtDescripcionTelefono.Location = new System.Drawing.Point(17, 295);
+            this.TxtDescripcionTelefono.Multiline = true;
+            this.TxtDescripcionTelefono.Name = "TxtDescripcionTelefono";
+            this.TxtDescripcionTelefono.ReadOnly = true;
+            this.TxtDescripcionTelefono.Size = new System.Drawing.Size(366, 66);
+            this.TxtDescripcionTelefono.TabIndex = 9;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 219);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(99, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Descripción: ";
             // 
             // LkLblNombre
             // 
-            this.LkLblNombre.ActiveLinkColor = System.Drawing.Color.Red;
             this.LkLblNombre.AutoSize = true;
-            this.LkLblNombre.LinkColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.LkLblNombre.Location = new System.Drawing.Point(15, 179);
+            this.LkLblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LkLblNombre.LinkColor = System.Drawing.Color.Black;
+            this.LkLblNombre.Location = new System.Drawing.Point(17, 163);
             this.LkLblNombre.Name = "LkLblNombre";
-            this.LkLblNombre.Size = new System.Drawing.Size(50, 13);
-            this.LkLblNombre.TabIndex = 7;
+            this.LkLblNombre.Size = new System.Drawing.Size(63, 16);
+            this.LkLblNombre.TabIndex = 11;
             this.LkLblNombre.TabStop = true;
-            this.LkLblNombre.Text = "Nombre: ";
+            this.LkLblNombre.Text = "Nombre";
+            this.LkLblNombre.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.LkLblNombre_MouseDoubleClick);
             // 
             // ucTelefono
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.LkLblNombre);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TxtDescripcionTelefono);
+            this.Controls.Add(this.LblMarcaModelo);
             this.Controls.Add(this.LblDescripcion);
-            this.Controls.Add(this.LblModelo);
-            this.Controls.Add(this.LblMarca);
             this.Controls.Add(this.LblNoExistencias);
-            this.Controls.Add(this.LblID);
             this.Controls.Add(this.PBImage);
             this.Name = "ucTelefono";
-            this.Size = new System.Drawing.Size(298, 310);
+            this.Size = new System.Drawing.Size(408, 376);
             this.Load += new System.EventHandler(this.ucTelefono_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PBImage)).EndInit();
             this.ResumeLayout(false);
@@ -128,11 +136,11 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
         #endregion
 
         private System.Windows.Forms.PictureBox PBImage;
-        private System.Windows.Forms.Label LblID;
         private System.Windows.Forms.Label LblNoExistencias;
-        private System.Windows.Forms.Label LblMarca;
-        private System.Windows.Forms.Label LblModelo;
         private System.Windows.Forms.Label LblDescripcion;
+        private System.Windows.Forms.Label LblMarcaModelo;
+        private System.Windows.Forms.TextBox TxtDescripcionTelefono;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.LinkLabel LkLblNombre;
     }
 }

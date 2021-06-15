@@ -13,21 +13,26 @@ namespace Sistematico___EthanDavila_y_AxelMoreno.User_Controls
 {
     public partial class ucTelefono : UserControl
     {
+        public Agregar Actualizar;
         public Telefono Telefono { get; set; }
         public ucTelefono()
         {
             InitializeComponent();
+            Actualizar = new Agregar();
         }
 
         private void ucTelefono_Load(object sender, EventArgs e)
         {
             PBImage.Image = Image.FromFile(Telefono.Imagen);
-            LblID.Text = LblID.Text + " " + Telefono.ID;
-            LkLblNombre.Text = LkLblNombre.Text + " " + Telefono.Nombre;
-            LblMarca.Text = LblMarca.Text + " " + Telefono.Marca.ToString();
-            LblModelo.Text = LblModelo.Text + " " + Telefono.Modelo.ToString();
+            LkLblNombre.Text = Telefono.ID + ". " + Telefono.Nombre;
+            LblMarcaModelo.Text = Telefono.Marca + ", " + Telefono.Modelo;
             LblNoExistencias.Text = LblNoExistencias.Text + " " + Telefono.NoExistencias;
-            LblDescripcion.Text = LblDescripcion.Text + " " + Telefono.Descripción;
+            TxtDescripcionTelefono.Text = Telefono.Descripción;
+        }
+
+        private void LkLblNombre_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
         }
     }
 }
